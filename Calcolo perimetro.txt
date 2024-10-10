@@ -1,0 +1,32 @@
+import math
+print ("Calcola il perimetro di una figura geometrica.")
+print ("\n")
+print ("Scegli la figura tra:")
+print ("1 - Quadrato")
+print ("2 - Cerchio")
+print ("3 - Rettangolo")
+print ("\n")
+scelta = int(input("---> "))
+print ("\n")
+if scelta == 1:
+    print("Hai selezionato il Quadrato!")
+    lato = float(input ("Inserisci la lunghezza di un lato in cm: "))
+    print ("Il perimetro del tuo quadrato è: ", lato * 4, "cm")
+elif scelta == 2:
+    print ("Hai selezionato il Cerchio!")
+    raggio = float(input("Inserisci il valore del raggio in cm: "))
+    print ("La circonferenza del tuo cerchio è:", 2 * math.pi * raggio, "cm")
+elif scelta == 3:
+    print (" Hai selezionato il Rettangolo!")
+    lato1 = float(input("Inserisci il valore del lato corto in cm: "))
+    lato2 = float(input("Inserisci il valore del lato lungo in cm: "))
+    print ("Il perimetro del tuo rettangolo è: ", (lato1 * 2) + (lato2 * 2), "cm")
+    while lato2 <= lato1:
+        if lato2 > lato2:
+            print ("Il perimetro del tuo rettangolo è: ", (lato1 * 2) + (lato2 * 2), "cm")
+            break
+        else:
+            print ("Hai sbagliato! Il lato corto non può essere maggiore o uguale al lato lungo, riprova!")
+            lato1 = float(input("Inserisci il valore del lato corto in cm: "))
+            lato2 = float(input("Inserisci il valore del lato lungo in cm: "))
+            print ("Il perimetro del tuo rettangolo è: ", (lato1 * 2) + (lato2 * 2), "cm")
